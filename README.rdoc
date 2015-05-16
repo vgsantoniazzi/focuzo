@@ -1,9 +1,13 @@
 = focuzo
 
-Description goes here.
+Rspec formatter to set color lamp in arduino!
+
+Set the environment variable `ARDUINO_IP` or by default arduino configured at "http://localhost:3000"
+
+Download here the arduino source code and view the the cheatsheet.
 
 == Contributing to focuzo
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.
