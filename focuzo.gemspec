@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "focuzo.gemspec",
     "lib/api.rb",
     "lib/focuzo.rb",
     "spec/spec_helper.rb",
