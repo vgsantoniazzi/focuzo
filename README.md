@@ -1,19 +1,32 @@
 Focuzo
-==============
+--------------
 
 Rspec formatter to set light lamp through arduino, based on status of tests.
 
-Download [here the arduino source code](http://github.com/vgsantoniazzi/focuzo-arduino) and setup your arduino.
+Download [here the arduino source code](http://github.com/vsgantoniazzi/focuzo-arduino) and setup your arduino.
 
 Configuring
-==============
+--------------
 
-Set the environment variable ARDUINO_IP (by default arduino configured in "http://192.168.0.10:80")
+Set the environment variable ARDUINO_IP. (by default arduino configured in "http://192.168.0.10:80")
 
+Using the formatter
+--------------
 
+Add gem to your Gemfile:
+
+```
+gem 'focuzo'
+```
+or simple install with: `gem install focuzo`.
+
+When you call RSpec, set the format option with: Focuzo. `rspec spec/ --format Focuzo`
+
+Or [add in your .rspec](http://github.com/vgsantoniazzi/focuzo/.rspec)
 
 
 Contributing to focuzo
+--------------
 
 - Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 - Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
