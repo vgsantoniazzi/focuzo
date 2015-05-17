@@ -3,7 +3,7 @@ Focuzo
 
 Rspec formatter to set light lamp through arduino, based on status of tests.
 
-Download [here the arduino source code](http://github.com/vsgantoniazzi/focuzo-arduino) and setup your arduino.
+Download [here the arduino source code](http://github.com/vgsantoniazzi/focuzo-arduino) and setup your arduino.
 
 Configuring
 ==============
