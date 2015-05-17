@@ -29,8 +29,8 @@ class API
   end
 
   def uri(color)
-    base_uri = ENV['ARDUINO_IP'] || "http://localhost:3000"
-    URI("#{base_uri}/#{color}")
+    base_uri = ENV['ARDUINO_IP'] || "http://192.168.0.10:80"
+    URI("#{base_uri}/#{color}/")
   end
 
   def yellow?

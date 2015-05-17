@@ -1,11 +1,17 @@
-focuzo
+Focuzo
 ==============
 
-Rspec formatter to set light lamp through arduino!
+Rspec formatter to set light lamp through arduino, based on status of tests.
 
-Set the environment variable ARDUINO_IP or by default arduino configured at "http://localhost:3000"
+Download [here the arduino source code](http://github.com/vsgantoniazzi/focuzo-arduino) and setup your arduino.
 
-Download here the arduino source code and view the the cheatsheet.
+Configuring
+==============
+
+Set the environment variable ARDUINO_IP (by default arduino configured in "http://192.168.0.10:80")
+
+
+
 
 Contributing to focuzo
 
