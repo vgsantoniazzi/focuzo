@@ -1,43 +1,46 @@
-Focuzo
---------------
+## Welcome to Focuzo
 
-Rspec formatter to set light lamp through arduino, based on status of tests.
+Rspec formatter to call anyting you want by HTTP requests
 
-Download [the arduino source code](https://github.com/vgsantoniazzi/focuzo-arduino) and setup your arduino.
+## Getting Started
 
-Configuring
---------------
-
-Set the environment variable ARDUINO_IP. (by default arduino configured in "http://192.168.0.10:80")
-
-Using the formatter
---------------
-
-Add gem to your Gemfile:
+From rubygems:
 
 ```
-gem 'focuzo'
+gem install focuzo
 ```
-or simple install with: `gem install focuzo`.
 
-When you call RSpec, set the format option with: Focuzo. `rspec spec/ --format Focuzo`
+From source code:
 
-or [add in your .rspec](https://github.com/vgsantoniazzi/focuzo/blob/master/.rspec)
+```
+git clone git@github.com:vgsantoniazzi/focuzo.git
+cd focuzo
+gem build --verbose focuzo.gemspec
+gem install focuzo-version.gem
+```
 
+## Usage
 
-Contributing to focuzo
---------------
+setup `NOTIFIER_IP` environment variable, similar like: `NOTIFIER_IP=192.168.0.10`
 
-- Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
-- Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
-- Fork the project.
-- Start a feature/bugfix branch.
-- Commit and push until you are happy with your contribution.
-- Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-- Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+```
+rspec --format Focuzo
+```
 
-Copyright
+When test suit starts, it makes a call for notifier ip with color yellow: `http://192.168.0.10/yellow` representing that started.
 
-Copyright (c) 2015 Victor Antoniazzi. See LICENSE.txt for
-further details.
+When single test fail, it makes a call for notifier ip with color red: `http://192.168.0.10/red` representing that failed.
 
+When test finish without fail, it makes a call for notifier ip with color green: `http://192.168.0.10/green` representing that everything is OK.
+
+## Contributing
+
+I :heart: Open source!
+
+[Follow github guides for forking a project](https://guides.github.com/activities/forking/)
+
+[Follow github guides for contributing open source](https://guides.github.com/activities/contributing-to-open-source/#contributing)
+
+## License
+
+Gem is released under the [MIT license](http://opensource.org/licenses/MIT).
