@@ -31,7 +31,7 @@ When test suit starts, it makes a call for notifier ip with color yellow: `http:
 
 When single test fail, it makes a call for notifier ip with color red: `http://192.168.0.10/red` representing that failed.
 
-When test finish without fail, it makes a call for notifier ip with color green: `http://192.168.0.10/green` representing that everything is OK.
+When test suit finish without fail, it makes a call for notifier ip with color green: `http://192.168.0.10/green` representing that everything is OK.
 
 ## Contributing
 
