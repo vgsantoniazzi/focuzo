@@ -24,12 +24,13 @@ class API
 
   def light(color)
     uri = uri(color)
-    Net::HTTP.new(uri.host, uri.port).get(uri.path, {})
     @status = color
+    return if ENV["MOCK"] == "true"
+    Net::HTTP.new(uri.host, uri.port).get(uri.path, {})
   end
 
   def uri(color)
-    base_uri = ENV['ARDUINO_IP'] || "http://192.168.0.10:80"
+    base_uri = ENV['NOTIFIER_IP'] || "http://192.168.0.10:80"
     URI("#{base_uri}/#{color}/")
   end
 
