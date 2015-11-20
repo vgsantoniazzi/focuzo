@@ -1,4 +1,7 @@
 source "http://rubygems.org"
 
 gem "rspec"
-gem "jeweler"
+
+group :development, :test do
+  gem "jeweler"
+end

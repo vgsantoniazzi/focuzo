@@ -5,7 +5,7 @@ require 'singleton'
 class API
   include Singleton
 
-  attr_accessor :status
+  attr_accessor :color
 
   def started
     light(:yellow)
@@ -16,15 +16,14 @@ class API
   end
 
   def finished
-    return unless yellow?
-    light(:green)
+    light(:green) if yellow?
   end
 
   private
 
   def light(color)
     uri = uri(color)
-    @status = color
+    @color = color
     return if ENV["MOCK"] == "true"
     Net::HTTP.new(uri.host, uri.port).get(uri.path, {})
   end
@@ -35,6 +34,6 @@ class API
   end
 
   def yellow?
-    @status == :yellow
+    color == :yellow
   end
 end

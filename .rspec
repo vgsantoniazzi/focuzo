@@ -1,4 +1,3 @@
 --color
---format Focuzo
 --format progress
 --require spec_helper
